@@ -35,7 +35,7 @@ body {
 .sidebar {
   width: 40%;
   background: white;
-  padding: 25px; /* TĂNG: từ 20px lên 25px */
+  padding: 25px;
   border-right: 1px solid #e1e5e9;
   height: 100%;
   overflow: hidden;
@@ -46,49 +46,49 @@ body {
 }
 
 .profile {
-  /* THAY ĐỔI: Thêm padding để tạo khoảng cách nhỏ trên dưới */
   display: flex;
   flex-direction: column;
-  padding: 25px 0; /* THÊM: Khoảng cách nhỏ trên dưới */
+  padding: 40px 0;
 }
 
 .name {
-  font-size: 32px; /* TĂNG: từ 28px lên 32px */
+  font-size: 32px;
   font-weight: 700;
-  margin-bottom: 6px; /* TĂNG: từ 5px lên 6px */
+  margin-bottom: 6px;
   color: #1a1a1a;
 }
 
 .tagline {
   color: #666;
-  margin-bottom: 18px; /* TĂNG: từ 15px lên 18px */
-  font-size: 15px; /* TĂNG: từ 14px lên 15px */
+  margin-bottom: 18px;
+  font-size: 15px;
 }
 
 .bio {
-  margin-bottom: 22px; /* TĂNG: từ 18px lên 22px */
+  margin-bottom: 22px;
   color: #555;
   line-height: 1.5;
-  font-size: 14px; /* TĂNG: từ 13px lên 14px */
+  font-size: 14px;
 }
 
 /* Contact section - Resume và Social cùng hàng */
 .contact-section {
   display: flex;
   align-items: center;
-  gap: 15px; /* TĂNG: từ 12px lên 15px */
-  margin-bottom: 22px; /* TĂNG: từ 18px lên 22px */
+  gap: 15px;
+  margin-bottom: 22px;
 }
 
+/* HIỆU ỨNG BUTTON ĐƠN GIẢN - Resume Button */
 .btn-primary,
 .btn-secondary {
-  padding: 10px 16px; /* TĂNG: từ 8px 15px lên 10px 16px */
+  padding: 10px 16px;
   border: none;
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-size: 13px; /* TĂNG: từ 12px lên 13px */
+  font-size: 13px;
   white-space: nowrap;
 }
 
@@ -97,28 +97,35 @@ body {
   color: white;
 }
 
-.btn-primary:hover {
-  background: #0056b3;
-  transform: translateY(-1px);
-}
-
 .btn-secondary {
   background: #f5f5f7;
   color: #333;
+  border: 1px solid transparent;
+}
+
+/* Hiệu ứng hover đơn giản cho Resume button */
+.btn-primary:hover {
+  background: #0056b3;
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+  transform: translateY(-1px);
 }
 
 .btn-secondary:hover {
-  background: #e1e1e6;
+  background: #e8e8ed;
+  border: 1px solid #d1d1d6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
 }
 
+/* HIỆU ỨNG SOCIAL LINKS ĐƠN GIẢN */
 .social-links {
   display: flex;
-  gap: 10px; /* TĂNG: từ 8px lên 10px */
+  gap: 10px;
 }
 
 .social-links a {
-  width: 34px; /* TĂNG: từ 32px lên 34px */
-  height: 34px; /* TĂNG: từ 32px lên 34px */
+  width: 34px;
+  height: 34px;
   background: #f5f5f7;
   border-radius: 6px;
   display: flex;
@@ -127,36 +134,61 @@ body {
   color: #666;
   text-decoration: none;
   transition: all 0.2s ease;
-  font-size: 14px; /* TĂNG: từ 13px lên 14px */
+  font-size: 14px;
+  border: 1px solid transparent;
 }
 
+/* Hiệu ứng hover đơn giản cho social icons */
 .social-links a:hover {
-  background: #007aff;
-  color: white;
+  background: #e8e8ed;
+  color: #333;
+  border: 1px solid #d1d1d6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
+}
+
+/* Màu riêng cho từng social icon khi hover (nhẹ nhàng) */
+.social-links a:nth-child(1):hover {
+  color: #333;
+  box-shadow: 0 4px 12px rgba(51, 51, 51, 0.2);
+}
+
+.social-links a:nth-child(2):hover {
+  color: #ea4335;
+  box-shadow: 0 4px 12px rgba(234, 67, 53, 0.2);
+}
+
+.social-links a:nth-child(3):hover {
+  color: #0077b5;
+  box-shadow: 0 4px 12px rgba(0, 119, 181, 0.2);
+}
+
+.social-links a:nth-child(4):hover {
+  color: #25d366;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
 }
 
 .skills-section {
   display: flex;
   flex-direction: column;
-  gap: 8px; /* TĂNG: từ 6px lên 8px */
+  gap: 8px;
 }
 
 .skill-group {
-  margin-bottom: 6px; /* TĂNG: từ 4px lên 6px */
+  margin-bottom: 6px;
 }
 
 .skills-section h3 {
-  font-size: 13px; /* TĂNG: từ 12px lên 13px */
+  font-size: 13px;
   font-weight: 600;
   color: #1a1a1a;
-  margin-bottom: 3px; /* TĂNG: từ 2px lên 3px */
+  margin-bottom: 3px;
 }
 
 .skills-section p {
-  font-size: 13px; /* TĂNG: từ 12px lên 13px */
+  font-size: 13px;
   color: #666;
-  line-height: 1.4; /* TĂNG: từ 1.3 lên 1.4 */
+  line-height: 1.4;
 }
 
 /* MAIN CONTENT STYLING - 60% màn hình */
@@ -356,11 +388,11 @@ body {
     border-bottom: 1px solid #e1e5e9;
     overflow-y: auto;
     padding: 18px;
-    justify-content: flex-start; /* Mobile không canh giữa */
+    justify-content: flex-start;
   }
 
   .profile {
-    padding: 10px 0; /* Giảm padding cho mobile */
+    padding: 15px 0;
   }
 
   .main-content {
@@ -377,7 +409,7 @@ body {
   }
 
   .name {
-    font-size: 26px; /* Giữ tỷ lệ cho mobile */
+    font-size: 26px;
   }
 
   .tagline {
