@@ -1,4 +1,4 @@
-// Sample project data
+// Sample project data - CÓ STARS VÀ GIT LINKS
 const projectsData = [
   {
     id: 1,
@@ -6,8 +6,10 @@ const projectsData = [
     date: "May 24, 2024",
     description: "E-commerce and sales management platform for SMBs",
     image: "images/project1.jpg",
+    gitLink: "https://github.com/yourusername/personal-saas",
+    stars: 125,
     tags: [
-      "Next.JS",
+      "NextJS",
       "TailwindCSS",
       "Docker",
       "TypeScript",
@@ -24,7 +26,9 @@ const projectsData = [
     description:
       "A highly customizable SaaS theme allowing users to personalize every aspect of their website",
     image: "images/project2.jpg",
-    tags: ["Next.JS", "Redux", "AWS", "GraphQL", "SaaS", "E-commerce"],
+    gitLink: "https://github.com/yourusername/saas-theme",
+    stars: 89,
+    tags: ["NextJS", "Redux", "AWS", "GraphQL", "SaaS", "E-commerce"],
     category: "web",
   },
   {
@@ -33,6 +37,8 @@ const projectsData = [
     date: "November 30, 2023",
     description: "Appointment management system for US nail salons",
     image: "images/project3.jpg",
+    gitLink: "https://github.com/yourusername/instagram-clone",
+    stars: 67,
     tags: ["React Native", "Node.js", "Socket.io", "MongoDB"],
     category: "mobile",
   },
@@ -68,7 +74,6 @@ function setupEventListeners() {
   sortSelect.addEventListener("change", handleSort);
 }
 
-// Tab switching function
 function switchTab(tabName, button) {
   // Remove active class from all tabs and buttons
   tabButtons.forEach((btn) => btn.classList.remove("active"));
@@ -77,6 +82,14 @@ function switchTab(tabName, button) {
   // Add active class to clicked button and corresponding content
   button.classList.add("active");
   document.getElementById(tabName).classList.add("active");
+
+  // Show/Hide search bar - CHỈ HIỆN KHI Ở TAB PROJECTS
+  const searchFilterBar = document.querySelector(".search-filter-bar");
+  if (tabName === "projects") {
+    searchFilterBar.classList.remove("hidden");
+  } else {
+    searchFilterBar.classList.add("hidden");
+  }
 }
 
 // Render projects
@@ -89,32 +102,42 @@ function renderProjects(projects) {
   });
 }
 
-// Create individual project card
+// Create individual project card - COMPACT LAYOUT
 function createProjectCard(project) {
   const card = document.createElement("div");
   card.className = "project-card";
   card.innerHTML = `
-        <img src="${project.image}" alt="${
-    project.title
-  }" class="project-image" 
-             onerror="this.style.background='#f5f5f7'; this.style.display='block';">
-        <div class="project-info">
-            <div class="project-date">${project.date}</div>
-            <h3 class="project-title">${project.title}</h3>
-            <p class="project-description">${project.description}</p>
-            <div class="project-tags">
-                ${project.tags
-                  .map((tag) => `<span class="tag">${tag}</span>`)
-                  .join("")}
-            </div>
+    <!-- BÊN TRÁI: Thông tin project -->
+    <div class="project-info">
+      <div class="project-header">
+        <h3 class="project-title">${project.title}</h3>
+        <div class="project-date">${project.date}</div>
+      </div>
+      
+      <p class="project-description">${project.description}</p>
+      
+      <div class="project-footer">
+        <div class="project-tags">
+          ${project.tags
+            .map((tag) => `<span class="tag">${tag}</span>`)
+            .join("")}
         </div>
-    `;
-
-  // Add click event for project card
-  card.addEventListener("click", () => {
-    // You can add modal or navigation logic here
-    console.log(`Clicked on ${project.title}`);
-  });
+        
+        <div class="project-stars">
+          <i class="fas fa-star"></i>
+          <span>${project.stars}</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- BÊN PHẢI: Ảnh project nhỏ (có thể click) -->
+    <div class="project-image-container" onclick="window.open('${
+      project.gitLink
+    }', '_blank')">
+      <img src="${project.image}" alt="${project.title}" class="project-image" 
+           onerror="this.style.background='#f5f5f7'; this.style.display='block';">
+    </div>
+  `;
 
   return card;
 }

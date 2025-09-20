@@ -83,39 +83,39 @@ body {
 .btn-primary,
 .btn-secondary {
   padding: 10px 16px;
-  border: 1px solid #333; /* Border đen */
+  border: 1px solid #333;
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
   font-size: 13px;
   white-space: nowrap;
-  background: white; /* Background trắng */
-  color: #333; /* Chữ đen */
+  background: white;
+  color: #333;
 }
 
 .btn-primary {
-  background: #333; /* Primary button có background đen */
-  color: white; /* Chữ trắng */
+  background: #333;
+  color: white;
   border: 1px solid #333;
 }
 
 .btn-secondary {
-  background: white; /* Secondary button có background trắng */
-  color: #333; /* Chữ đen */
+  background: white;
+  color: #333;
   border: 1px solid #333;
 }
 
 /* Hiệu ứng hover: ĐẢO NGƯỢC màu đen-trắng */
 .btn-primary:hover {
-  background: white; /* Đen -> Trắng */
-  color: #333; /* Trắng -> Đen */
+  background: white;
+  color: #333;
   border: 1px solid #333;
 }
 
 .btn-secondary:hover {
-  background: #333; /* Trắng -> Đen */
-  color: white; /* Đen -> Trắng */
+  background: #333;
+  color: white;
   border: 1px solid #333;
 }
 
@@ -128,13 +128,13 @@ body {
 .social-links a {
   width: 34px;
   height: 34px;
-  background: white; /* Background trắng */
-  border: 1px solid #333; /* Border đen */
+  background: white;
+  border: 1px solid #333;
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #333; /* Icon đen */
+  color: #333;
   text-decoration: none;
   transition: all 0.2s ease;
   font-size: 14px;
@@ -142,8 +142,8 @@ body {
 
 /* Hiệu ứng hover: ĐẢO NGƯỢC màu đen-trắng */
 .social-links a:hover {
-  background: #333; /* Trắng -> Đen */
-  color: white; /* Đen -> Trắng */
+  background: #333;
+  color: white;
   border: 1px solid #333;
 }
 
@@ -214,13 +214,18 @@ body {
   color: #1a1a1a;
 }
 
-/* Search and Filter Bar */
+/* Ẩn search bar mặc định */
 .search-filter-bar {
   display: flex;
   gap: 15px;
   margin-bottom: 25px;
   align-items: center;
   flex-shrink: 0;
+}
+
+/* Chỉ hiện search bar khi ở tab projects */
+.search-filter-bar.hidden {
+  display: none;
 }
 
 .search-box {
@@ -249,7 +254,7 @@ body {
 
 .search-box input:focus {
   outline: none;
-  border-color: #007aff;
+  border-color: #9ea1a4;
 }
 
 .sort-dropdown {
@@ -273,75 +278,120 @@ body {
   flex-direction: column;
 }
 
-/* Projects Grid */
+/* PROJECTS GRID - LAYOUT COMPACT NẰM NGANG */
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Giảm từ 20px xuống 15px */
   padding-bottom: 20px;
 }
 
 .project-card {
   background: white;
-  border-radius: 10px;
+  border-radius: 8px; /* Giảm từ 10px xuống 8px */
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
-  cursor: pointer;
+  display: flex;
+  min-height: 110px; /* GIẢM từ 160px xuống 110px */
 }
 
 .project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Giảm shadow */
 }
 
-.project-image {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  background: #f5f5f7;
-}
-
+/* BÊN TRÁI: Thông tin project - chiếm nhiều không gian hơn */
 .project-info {
-  padding: 20px;
+  flex: 1;
+  padding: 16px; /* Giảm từ 20px xuống 16px */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-header {
+  margin-bottom: 8px; /* Giảm từ 12px xuống 8px */
 }
 
 .project-title {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 6px;
+  font-size: 20px; /* Giảm từ 24px xuống 20px */
+  font-weight: 700;
+  margin-bottom: 3px; /* Giảm từ 4px xuống 3px */
   color: #1a1a1a;
 }
 
 .project-date {
   font-size: 12px;
-  color: #999;
-  margin-bottom: 8px;
+  color: #666;
 }
 
 .project-description {
-  color: #666;
-  margin-bottom: 15px;
-  font-size: 14px;
-  line-height: 1.5;
+  color: #555;
+  margin-bottom: 12px; /* Giảm từ 15px xuống 12px */
+  font-size: 13px; /* Giảm từ 14px xuống 13px */
+  line-height: 1.4; /* Giảm từ 1.5 xuống 1.4 */
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 2; /* Chỉ hiện 2 dòng */
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.project-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Giảm từ 12px xuống 8px */
 }
 
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 4px; /* Giảm từ 6px xuống 4px */
 }
 
 .tag {
   background: #f0f0f0;
   color: #666;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
+  padding: 3px 6px; /* Giảm từ 4px 8px xuống 3px 6px */
+  border-radius: 3px; /* Giảm từ 4px xuống 3px */
+  font-size: 11px; /* Giảm từ 12px xuống 11px */
+}
+
+/* Số sao */
+.project-stars {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* Giảm từ 6px xuống 4px */
+  color: #666;
+  font-size: 13px; /* Giảm từ 14px xuống 13px */
+}
+
+.project-stars i {
+  color: #ffa500;
+}
+
+/* BÊN PHẢI: Ảnh project - NHỎ HỖN NHIỀU */
+.project-image-container {
+  width: 200px;
+  height: auto; /* Sửa từ 10px */
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 10px; /* ← THÊM: Tạo khoảng trắng xung quanh */
+  display: flex; /* ← THÊM: Để center ảnh */
+  align-items: center; /* ← THÊM: Center theo chiều dọc */
+  justify-content: center; /* ← THÊM: Center theo chiều ngang */
+}
+
+.project-image-container:hover {
+  opacity: 0.8; /* Giảm opacity khi hover */
+}
+
+.project-image {
+  width: calc(100% - 0px); /* Giữ nguyên hoặc điều chỉnh */
+  height: 147px; /* Giảm từ 110px để có chỗ cho padding */
+  object-fit: cover;
+  background: #f5f5f7;
+  border-radius: 4px; /* ← THÊM: Bo góc nhẹ cho đẹp */
 }
 
 /* Responsive Design */
@@ -379,8 +429,19 @@ body {
     flex: 1;
   }
 
-  .projects-grid {
-    grid-template-columns: 1fr;
+  /* Mobile: Project cards stack vertical */
+  .project-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .project-image-container {
+    width: 100%;
+    height: 150px; /* Tăng height cho mobile */
+  }
+
+  .project-image {
+    height: 150px;
   }
 
   .search-filter-bar {
@@ -423,8 +484,11 @@ body {
     font-size: 13px;
   }
 
+  .project-title {
+    font-size: 18px;
+  }
+
   .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 12px;
   }
 }
