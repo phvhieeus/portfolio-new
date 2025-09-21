@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; /* ← THÊM cho consistency */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 body {
@@ -53,26 +53,26 @@ body {
 }
 
 .name {
-  font-size: 32px;
+  font-size: 36px; /* ← TĂNG từ 32px lên 36px */
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 8px; /* ← TĂNG từ 6px lên 8px */
   color: #1a1a1a;
-  font-family: inherit; /* ← THÊM */
+  font-family: inherit;
 }
 
 .tagline {
   color: #666;
-  margin-bottom: 18px;
-  font-size: 15px;
-  font-family: inherit; /* ← THÊM */
+  margin-bottom: 20px; /* ← TĂNG từ 18px lên 20px */
+  font-size: 17px; /* ← TĂNG từ 15px lên 17px */
+  font-family: inherit;
 }
 
 .bio {
-  margin-bottom: 22px;
+  margin-bottom: 24px; /* ← TĂNG từ 22px lên 24px */
   color: #555;
-  line-height: 1.5;
-  font-size: 14px;
-  font-family: inherit; /* ← THÊM */
+  line-height: 1.6; /* ← TĂNG từ 1.5 lên 1.6 */
+  font-size: 15px; /* ← TĂNG từ 14px lên 15px */
+  font-family: inherit;
 }
 
 /* Contact section - Resume và Social cùng hàng */
@@ -80,23 +80,23 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 22px;
+  margin-bottom: 24px; /* ← TĂNG từ 22px lên 24px */
 }
 
 /* HIỆU ỨNG ĐEN TRẮNG CHO RESUME BUTTON */
 .btn-primary,
 .btn-secondary {
-  padding: 10px 16px;
+  padding: 12px 18px; /* ← TĂNG từ 10px 16px lên 12px 18px */
   border: 1px solid #333;
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-size: 13px;
+  font-size: 14px; /* ← TĂNG từ 13px lên 14px */
   white-space: nowrap;
   background: white;
   color: #333;
-  font-family: inherit; /* ← THÊM */
+  font-family: inherit;
 }
 
 .btn-primary {
@@ -131,8 +131,8 @@ body {
 }
 
 .social-links a {
-  width: 34px;
-  height: 34px;
+  width: 36px; /* ← TĂNG từ 34px lên 36px */
+  height: 36px; /* ← TĂNG từ 34px lên 36px */
   background: white;
   border: 1px solid #333;
   border-radius: 6px;
@@ -142,8 +142,8 @@ body {
   color: #333;
   text-decoration: none;
   transition: all 0.2s ease;
-  font-size: 14px;
-  font-family: inherit; /* ← THÊM */
+  font-size: 15px; /* ← TĂNG từ 14px lên 15px */
+  font-family: inherit;
 }
 
 /* Hiệu ứng hover: ĐẢO NGƯỢC màu đen-trắng */
@@ -156,33 +156,33 @@ body {
 .skills-section {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px; /* ← TĂNG từ 8px lên 10px */
 }
 
 .skill-group {
-  margin-bottom: 6px;
+  margin-bottom: 8px; /* ← TĂNG từ 6px lên 8px */
 }
 
 .skills-section h3 {
-  font-size: 13px;
-  font-weight: 500; /* ← GIẢM từ 600 xuống 500 */
+  font-size: 14px; /* ← TĂNG từ 13px lên 14px */
+  font-weight: 500;
   color: #1a1a1a;
-  margin-bottom: 3px;
-  font-family: inherit; /* ← THÊM */
+  margin-bottom: 4px; /* ← TĂNG từ 3px lên 4px */
+  font-family: inherit;
 }
 
 .skills-section p {
-  font-size: 13px;
+  font-size: 14px; /* ← TĂNG từ 13px lên 14px */
   color: #666;
-  line-height: 1.4;
-  font-weight: 400; /* ← THÊM normal weight */
-  font-family: inherit; /* ← THÊM */
+  line-height: 1.5; /* ← TĂNG từ 1.4 lên 1.5 */
+  font-weight: 400;
+  font-family: inherit;
 }
 
-/* ← THÊM: Fix cho nested p trong h3 */
+/* Fix cho nested p trong h3 */
 .skills-section h3 p {
-  font-size: 13px;
-  font-weight: 400; /* Normal weight cho content */
+  font-size: 14px; /* ← TĂNG từ 13px lên 14px */
+  font-weight: 400;
   color: #666;
   margin: 0;
   font-family: inherit;
@@ -220,7 +220,7 @@ body {
   transition: all 0.2s ease;
   color: #666;
   font-size: 14px;
-  font-family: inherit; /* ← THÊM */
+  font-family: inherit;
 }
 
 .tab-btn.active {
@@ -269,7 +269,7 @@ body {
   font-size: 14px;
   background: white;
   transition: border-color 0.2s ease;
-  font-family: inherit; /* ← THÊM */
+  font-family: inherit;
 }
 
 .search-box input:focus {
@@ -284,7 +284,7 @@ body {
   background: white;
   cursor: pointer;
   font-size: 14px;
-  font-family: inherit; /* ← THÊM */
+  font-family: inherit;
 }
 
 /* Tab Content */
@@ -303,92 +303,92 @@ body {
 .projects-grid {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Giảm từ 20px xuống 15px */
+  gap: 15px;
   padding-bottom: 20px;
 }
 
 .project-card {
   background: white;
-  border-radius: 8px; /* Giảm từ 10px xuống 8px */
+  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
   display: flex;
-  min-height: 110px; /* GIẢM từ 160px xuống 110px */
+  min-height: 110px;
 }
 
 .project-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Giảm shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* BÊN TRÁI: Thông tin project - chiếm nhiều không gian hơn */
 .project-info {
   flex: 1;
-  padding: 16px; /* Giảm từ 20px xuống 16px */
+  padding: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .project-header {
-  margin-bottom: 8px; /* Giảm từ 12px xuống 8px */
+  margin-bottom: 8px;
 }
 
 .project-title {
-  font-size: 20px; /* Giảm từ 24px xuống 20px */
+  font-size: 24px;
   font-weight: 700;
-  margin-bottom: 3px; /* Giảm từ 4px xuống 3px */
+  margin-bottom: 3px;
   color: #1a1a1a;
-  font-family: inherit; /* ← THÊM */
+  font-family: inherit;
 }
 
 .project-date {
-  font-size: 12px;
+  font-size: 14px;
   color: #666;
-  font-family: inherit; /* ← THÊM */
+  font-family: inherit;
 }
 
 .project-description {
   color: #555;
-  margin-bottom: 12px; /* Giảm từ 15px xuống 12px */
-  font-size: 13px; /* Giảm từ 14px xuống 13px */
-  line-height: 1.4; /* Giảm từ 1.5 xuống 1.4 */
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.6;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* Chỉ hiện 2 dòng */
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  font-family: inherit; /* ← THÊM */
+  font-family: inherit;
 }
 
 .project-footer {
   display: flex;
   flex-direction: column;
-  gap: 8px; /* Giảm từ 12px xuống 8px */
+  gap: 8px;
 }
 
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px; /* Giảm từ 6px xuống 4px */
+  gap: 4px;
 }
 
 .tag {
   background: #f0f0f0;
   color: #666;
-  padding: 3px 6px; /* Giảm từ 4px 8px xuống 3px 6px */
-  border-radius: 3px; /* Giảm từ 4px xuống 3px */
-  font-size: 11px; /* Giảm từ 12px xuống 11px */
-  font-family: inherit; /* ← THÊM */
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-family: inherit;
 }
 
 /* Số sao */
 .project-stars {
   display: flex;
   align-items: center;
-  gap: 4px; /* Giảm từ 6px xuống 4px */
+  gap: 4px;
   color: #666;
-  font-size: 13px; /* Giảm từ 14px xuống 13px */
-  font-family: inherit; /* ← THÊM */
+  font-size: 15px;
+  font-family: inherit;
 }
 
 .project-stars i {
@@ -398,42 +398,41 @@ body {
 /* BÊN PHẢI: Ảnh project - NHỎ HỖN NHIỀU */
 .project-image-container {
   width: 200px;
-  height: auto; /* Sửa từ 10px */
+  height: auto;
   flex-shrink: 0;
   cursor: pointer;
   transition: all 0.2s ease;
-  padding: 10px; /* ← THÊM: Tạo khoảng trắng xung quanh */
-  display: flex; /* ← THÊM: Để center ảnh */
-  align-items: center; /* ← THÊM: Center theo chiều dọc */
-  justify-content: center; /* ← THÊM: Center theo chiều ngang */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-image-container:hover {
-  opacity: 0.8; /* Giảm opacity khi hover */
+  opacity: 0.8;
 }
 
 .project-image {
-  width: calc(100% - 0px); /* Giữ nguyên hoặc điều chỉnh */
-  height: 147px; /* Giảm từ 110px để có chỗ cho padding */
+  width: calc(100% - 0px);
+  height: 147px;
   object-fit: cover;
   background: #f5f5f7;
-  border-radius: 4px; /* ← THÊM: Bo góc nhẹ cho đẹp */
+  border-radius: 4px;
 }
 
 /* ==================== COMING SOON STYLING ==================== */
-/* Styling cho "coming soon" text - NHỎ HƠN VÀ ĐẸP HƠN */
 .tab-content h2 {
-  font-size: 14px; /* ← GIẢM SIZE */
-  font-weight: 400; /* ← NORMAL WEIGHT */
-  color: #999; /* ← NHẠT MÀU */
-  text-align: center; /* ← CENTER */
-  margin-top: 60px; /* ← MARGIN TRÊN */
-  font-style: italic; /* ← ITALIC */
-  font-family: inherit; /* ← CÙNG FONT */
-  padding: 20px; /* ← PADDING */
-  background: #f8f9fa; /* ← NẀN NHẸ */
-  border-radius: 8px; /* ← BO GÓC */
-  border: 1px dashed #ddd; /* ← VIỀN ĐỨT */
+  font-size: 14px;
+  font-weight: 400;
+  color: #999;
+  text-align: center;
+  margin-top: 60px;
+  font-style: italic;
+  font-family: inherit;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px dashed #ddd;
 }
 
 /* Responsive Design */
@@ -479,7 +478,7 @@ body {
 
   .project-image-container {
     width: 100%;
-    height: 150px; /* Tăng height cho mobile */
+    height: 150px;
   }
 
   .project-image {
@@ -491,11 +490,15 @@ body {
   }
 
   .name {
-    font-size: 26px;
+    font-size: 30px; /* ← TĂNG từ 26px lên 30px cho mobile */
   }
 
   .tagline {
-    font-size: 14px;
+    font-size: 16px; /* ← TĂNG từ 14px lên 16px cho mobile */
+  }
+
+  .bio {
+    font-size: 15px; /* ← GIỮ NGUYÊN 15px cho mobile */
   }
 
   /* Mobile: Resume và Social stack vertical */
@@ -526,15 +529,19 @@ body {
   }
 
   .name {
-    font-size: 24px;
+    font-size: 28px; /* ← TĂNG từ 24px lên 28px */
   }
 
   .tagline {
-    font-size: 13px;
+    font-size: 15px; /* ← TĂNG từ 13px lên 15px */
+  }
+
+  .bio {
+    font-size: 14px; /* ← TĂNG từ default lên 14px */
   }
 
   .project-title {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   .projects-grid {
@@ -568,7 +575,7 @@ textarea {
   font-family: inherit;
 }
 
-/* ← QUAN TRỌNG: GIỮ FONTAWESOME ICONS */
+/* QUAN TRỌNG: GIỮ FONTAWESOME ICONS */
 .fab,
 .fas,
 .far,
