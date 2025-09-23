@@ -1,0 +1,420 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #e5e5e5;
+  color: #333;
+  line-height: 1.6;
+  height: 100vh;
+  overflow: hidden;
+  padding: 15px;
+}
+
+/* App Frame */
+.app-frame {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #d6cdcd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fafafa;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/* SIDEBAR STYLING */
+.sidebar {
+  width: 40%;
+  background: white;
+  padding: 25px;
+  border-right: 1px solid #e1e5e9;
+  height: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+}
+
+.name {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1a1a1a;
+  font-family: inherit;
+}
+
+.tagline {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 17px;
+  font-family: inherit;
+}
+
+.bio {
+  margin-bottom: 24px;
+  color: #555;
+  line-height: 1.6;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+/* Contact Section */
+.contact-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 18px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  white-space: nowrap;
+  background: white;
+  color: #333;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: #333;
+  color: white;
+  border: 1px solid #333;
+}
+
+.btn-primary:hover {
+  background: white;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.btn-secondary:hover {
+  background: #333;
+  color: white;
+  border: 1px solid #333;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-links a {
+  width: 36px;
+  height: 36px;
+  background: white;
+  border: 1px solid #333;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.social-links a:hover {
+  background: #333;
+  color: white;
+  border: 1px solid #333;
+}
+
+/* Skills Section */
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skill-group {
+  margin-bottom: 8px;
+}
+
+.skills-section h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+  font-family: inherit;
+}
+
+.skills-section p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: inherit;
+}
+
+.skills-section h3 p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+  margin: 0;
+  font-family: inherit;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation Tabs */
+.nav-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  background: #f5f5f7;
+  padding: 3px;
+  flex-shrink: 0;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  background: transparent;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  color: #666;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.tab-btn.active {
+  background: white;
+  color: #1a1a1a;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tab-btn:hover {
+  color: #1a1a1a;
+}
+
+/* Search and Filter Bar */
+.search-filter-bar {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.search-filter-bar.hidden {
+  display: none;
+}
+
+.search-box {
+  flex: 1;
+  position: relative;
+}
+
+.search-box i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 14px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 45px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+  transition: border-color 0.2s ease;
+  font-family: inherit;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #9ea1a4;
+}
+
+.sort-dropdown {
+  padding: 12px 15px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.tab-content.active {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-style: italic;
+}
+
+.error {
+  text-align: center;
+  padding: 40px;
+  color: #e74c3c;
+}
+
+/* Font Consistency */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+a,
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.fab,
+.fas,
+.far,
+.fal,
+.fad,
+.fass,
+.fasr,
+.fatl,
+.fatr,
+.fak,
+i[class*="fa-"] {
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Pro",
+    "Font Awesome 6 Brands" !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 8px;
+  }
+
+  .app-frame {
+    border-width: 1px;
+    border-radius: 6px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    max-height: 40vh;
+    border-right: none;
+    border-bottom: 1px solid #e1e5e9;
+    overflow-y: auto;
+    padding: 18px;
+    justify-content: flex-start;
+  }
+
+  .profile {
+    padding: 15px 0;
+  }
+
+  .main-content {
+    padding: 20px;
+    flex: 1;
+  }
+
+  .name {
+    font-size: 30px;
+  }
+
+  .tagline {
+    font-size: 16px;
+  }
+
+  .bio {
+    font-size: 15px;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .search-filter-bar {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 5px;
+  }
+
+  .sidebar {
+    padding: 15px;
+  }
+
+  .name {
+    font-size: 28px;
+  }
+
+  .tagline {
+    font-size: 15px;
+  }
+
+  .bio {
+    font-size: 14px;
+  }
+}

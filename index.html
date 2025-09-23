@@ -3,8 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Portfolio - Ph Van Hieu</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/experience.css" />
+    <link rel="stylesheet" href="css/blog.css" />
+    <link rel="stylesheet" href="css/photo.css" />
+
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
@@ -29,7 +36,6 @@
               </p>
             </div>
 
-            <!-- Resume và Social links trên cùng 1 hàng -->
             <div class="contact-section">
               <button class="btn-primary">Resume</button>
               <div class="social-links">
@@ -67,7 +73,6 @@
                   <p>Java, JavaScript</p>
                 </h3>
               </div>
-
               <div class="skill-group">
                 <h3>
                   Frameworks:
@@ -77,25 +82,22 @@
                   </p>
                 </h3>
               </div>
-
               <div class="skill-group">
                 <h3>
                   Tool:
                   <p>MySQL, PostgreSQL</p>
                 </h3>
               </div>
-
               <div class="skill-group">
                 <h3>
                   Database:
                   <p>MySQL, MongoDB</p>
                 </h3>
               </div>
-
               <div class="skill-group">
                 <h3>
                   Certificate:
-                  <p>Toeic L&R: ...,</p>
+                  <p>Toeic L&R: 650</p>
                 </h3>
               </div>
             </div>
@@ -116,11 +118,7 @@
           <div class="search-filter-bar">
             <div class="search-box">
               <i class="fas fa-search"></i>
-              <input
-                type="text"
-                id="searchInput"
-                placeholder="Search projects"
-              />
+              <input type="text" id="searchInput" placeholder="Search..." />
             </div>
             <select id="sortSelect" class="sort-dropdown">
               <option value="featured">Featured</option>
@@ -129,29 +127,67 @@
             </select>
           </div>
 
-          <!-- Projects Grid -->
+          <!-- PROJECTS TAB -->
           <div id="projects" class="tab-content active">
             <div class="projects-grid" id="projectsGrid">
-              <!-- Projects sẽ được load bằng JavaScript -->
+              <!-- Projects will be loaded by JavaScript -->
             </div>
           </div>
 
-          <!-- Other tabs content (ẩn ban đầu) -->
+          <!-- EXPERIENCE TAB -->
           <div id="experience" class="tab-content">
-            <h2>Experience coming soon...</h2>
+            <div class="experience-container">
+              <div class="experience-timeline" id="experienceTimeline">
+                <!-- Experience will be loaded by JavaScript -->
+              </div>
+            </div>
           </div>
 
+          <!-- BLOG TAB -->
           <div id="blogs" class="tab-content">
-            <h2>Blog posts coming soon...</h2>
+            <div class="blog-container">
+              <div class="blog-grid" id="blogGrid">
+                <!-- Blog posts will be loaded by JavaScript -->
+              </div>
+            </div>
           </div>
 
+          <!-- PHOTO TAB -->
           <div id="photo" class="tab-content">
-            <h2>Photo gallery coming soon...</h2>
+            <div class="photo-container">
+              <div class="photo-categories" id="photoCategories">
+                <!-- Photo categories will be loaded by JavaScript -->
+              </div>
+              <div class="photo-gallery" id="photoGallery">
+                <!-- Photos will be loaded by JavaScript -->
+              </div>
+            </div>
           </div>
         </main>
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Photo Modal -->
+    <div id="photoModal" class="photo-modal">
+      <span class="close-modal">&times;</span>
+      <img class="modal-content" id="modalImage" />
+      <div class="modal-caption" id="modalCaption"></div>
+      <div class="modal-nav">
+        <button class="nav-btn" id="prevBtn">❮</button>
+        <button class="nav-btn" id="nextBtn">❯</button>
+      </div>
+    </div>
+
+    <!-- Data Files -->
+    <script src="data/experience-data.js"></script>
+    <script src="data/blog-data.js"></script>
+    <script src="data/photo-data.js"></script>
+
+    <!-- JavaScript Files -->
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/experience.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/photo.js"></script>
   </body>
 </html>
