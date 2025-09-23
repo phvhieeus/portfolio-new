@@ -23,7 +23,18 @@
         <!-- SIDEBAR - Profile Section -->
         <aside class="sidebar">
           <div class="profile">
-            <h1 class="name">Ph Van Hieu</h1>
+            <!-- Name with Dark Mode Toggle -->
+            <div class="name-section">
+              <h1 class="name">Ph Van Hieu</h1>
+              <button
+                class="dark-mode-toggle"
+                id="darkModeToggle"
+                aria-label="Toggle dark mode"
+              >
+                <i class="fas fa-moon" id="darkModeIcon"></i>
+              </button>
+            </div>
+
             <p class="tagline">Slaying code & making it lit fr fr 🔥</p>
 
             <div class="bio">
@@ -155,9 +166,6 @@
           <!-- PHOTO TAB -->
           <div id="photo" class="tab-content">
             <div class="photo-container">
-              <div class="photo-categories" id="photoCategories">
-                <!-- Photo categories will be loaded by JavaScript -->
-              </div>
               <div class="photo-gallery" id="photoGallery">
                 <!-- Photos will be loaded by JavaScript -->
               </div>

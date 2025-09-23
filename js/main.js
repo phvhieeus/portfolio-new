@@ -231,3 +231,97 @@ window.addEventListener("error", function (e) {
 window.addEventListener("unhandledrejection", function (e) {
   console.error("Unhandled promise rejection:", e.reason);
 });
+
+// ==================== DARK MODE ====================
+let isDarkMode = false;
+
+// ==================== INITIALIZATION ====================
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("Portfolio initializing...");
+
+  // Setup event listeners
+  setupEventListeners();
+
+  // Initialize dark mode
+  initializeDarkMode();
+
+  // Add interactive features
+  addInteractiveFeatures();
+
+  // Initialize default tab
+  switchTab(
+    "projects",
+    document.querySelector('.tab-btn[data-tab="projects"]')
+  );
+
+  console.log("Portfolio initialized successfully!");
+});
+
+// ==================== DARK MODE INITIALIZATION ====================
+function initializeDarkMode() {
+  // Check for saved dark mode preference
+  const savedDarkMode = localStorage.getItem("darkMode");
+
+  if (savedDarkMode === "true") {
+    enableDarkMode();
+  } else {
+    disableDarkMode();
+  }
+
+  // Setup dark mode toggle
+  const darkModeToggle = document.getElementById("darkModeToggle");
+  if (darkModeToggle) {
+    darkModeToggle.addEventListener("click", toggleDarkMode);
+  }
+}
+
+function toggleDarkMode() {
+  if (isDarkMode) {
+    disableDarkMode();
+  } else {
+    enableDarkMode();
+  }
+}
+
+function enableDarkMode() {
+  document.body.classList.add("dark-mode");
+  const darkModeIcon = document.getElementById("darkModeIcon");
+  if (darkModeIcon) {
+    darkModeIcon.className = "fas fa-sun";
+  }
+  isDarkMode = true;
+  localStorage.setItem("darkMode", "true");
+}
+
+function disableDarkMode() {
+  document.body.classList.remove("dark-mode");
+  const darkModeIcon = document.getElementById("darkModeIcon");
+  if (darkModeIcon) {
+    darkModeIcon.className = "fas fa-moon";
+  }
+  isDarkMode = false;
+  localStorage.setItem("darkMode", "false");
+}
+
+// ==================== EVENT LISTENERS ====================
+function setupEventListeners() {
+  // Tab switching
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const tabName = button.getAttribute("data-tab");
+      switchTab(tabName, button);
+    });
+  });
+
+  // Search functionality
+  if (searchInput) {
+    searchInput.addEventListener("input", handleGlobalSearch);
+  }
+
+  // Sort functionality
+  if (sortSelect) {
+    sortSelect.addEventListener("change", handleGlobalSort);
+  }
+}
+
+// ... rest of your existing main.js code remains the same

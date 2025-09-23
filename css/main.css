@@ -13,6 +13,7 @@ body {
   height: 100vh;
   overflow: hidden;
   padding: 15px;
+  transition: all 0.3s ease;
 }
 
 /* App Frame */
@@ -24,6 +25,7 @@ body {
   overflow: hidden;
   background: #fafafa;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .container {
@@ -44,6 +46,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .profile {
@@ -52,12 +55,43 @@ body {
   padding: 40px 0;
 }
 
+/* Name with Dark Mode Toggle */
+.name-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
 .name {
   font-size: 36px;
   font-weight: 700;
-  margin-bottom: 8px;
   color: #1a1a1a;
   font-family: inherit;
+  transition: color 0.3s ease;
+}
+
+.dark-mode-toggle {
+  background: transparent;
+  border: 2px solid #333;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-left: 15px;
+}
+
+.dark-mode-toggle:hover {
+  background: #333;
+  color: white;
+  transform: scale(1.1);
 }
 
 .tagline {
@@ -65,6 +99,7 @@ body {
   margin-bottom: 20px;
   font-size: 17px;
   font-family: inherit;
+  transition: color 0.3s ease;
 }
 
 .bio {
@@ -73,6 +108,7 @@ body {
   line-height: 1.6;
   font-size: 15px;
   font-family: inherit;
+  transition: color 0.3s ease;
 }
 
 /* Contact Section */
@@ -161,6 +197,7 @@ body {
   color: #1a1a1a;
   margin-bottom: 4px;
   font-family: inherit;
+  transition: color 0.3s ease;
 }
 
 .skills-section p {
@@ -169,6 +206,7 @@ body {
   line-height: 1.5;
   font-weight: 400;
   font-family: inherit;
+  transition: color 0.3s ease;
 }
 
 .skills-section h3 p {
@@ -177,6 +215,7 @@ body {
   color: #666;
   margin: 0;
   font-family: inherit;
+  transition: color 0.3s ease;
 }
 
 /* MAIN CONTENT */
@@ -198,6 +237,7 @@ body {
   background: #f5f5f7;
   padding: 3px;
   flex-shrink: 0;
+  transition: background 0.3s ease;
 }
 
 .tab-btn {
@@ -249,6 +289,7 @@ body {
   transform: translateY(-50%);
   color: #999;
   font-size: 14px;
+  transition: color 0.3s ease;
 }
 
 .search-box input {
@@ -258,8 +299,9 @@ body {
   border-radius: 8px;
   font-size: 14px;
   background: white;
-  transition: border-color 0.2s ease;
+  transition: all 0.2s ease;
   font-family: inherit;
+  color: #333;
 }
 
 .search-box input:focus {
@@ -275,6 +317,8 @@ body {
   cursor: pointer;
   font-size: 14px;
   font-family: inherit;
+  color: #333;
+  transition: all 0.3s ease;
 }
 
 /* Tab Content */
@@ -295,12 +339,14 @@ body {
   padding: 40px;
   color: #666;
   font-style: italic;
+  transition: color 0.3s ease;
 }
 
 .error {
   text-align: center;
   padding: 40px;
   color: #e74c3c;
+  transition: color 0.3s ease;
 }
 
 /* Font Consistency */
@@ -336,6 +382,146 @@ i[class*="fa-"] {
     "Font Awesome 6 Brands" !important;
 }
 
+/* ==================== DARK MODE STYLES ==================== */
+body.dark-mode {
+  background: #1a1a1a;
+  color: #e0e0e0;
+}
+
+body.dark-mode .app-frame {
+  background: #2d2d2d;
+  border-color: #444;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .sidebar {
+  background: #333;
+  border-right-color: #444;
+}
+
+/* Name and toggle dark mode */
+body.dark-mode .name {
+  color: #ffffff;
+}
+
+body.dark-mode .dark-mode-toggle {
+  border-color: #e0e0e0;
+  color: #e0e0e0;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+  background: #e0e0e0;
+  color: #333;
+}
+
+body.dark-mode .tagline {
+  color: #b0b0b0;
+}
+
+body.dark-mode .bio {
+  color: #c0c0c0;
+}
+
+/* Skills section dark mode */
+body.dark-mode .skills-section h3 {
+  color: #ffffff;
+}
+
+body.dark-mode .skills-section p,
+body.dark-mode .skills-section h3 p {
+  color: #b0b0b0;
+}
+
+/* Buttons dark mode */
+body.dark-mode .btn-primary {
+  background: #e0e0e0;
+  color: #333;
+  border-color: #e0e0e0;
+}
+
+body.dark-mode .btn-primary:hover {
+  background: #333;
+  color: #e0e0e0;
+  border-color: #e0e0e0;
+}
+
+body.dark-mode .btn-secondary {
+  background: #333;
+  color: #e0e0e0;
+  border-color: #e0e0e0;
+}
+
+body.dark-mode .btn-secondary:hover {
+  background: #e0e0e0;
+  color: #333;
+}
+
+/* Social links dark mode */
+body.dark-mode .social-links a {
+  background: #444;
+  border-color: #666;
+  color: #e0e0e0;
+}
+
+body.dark-mode .social-links a:hover {
+  background: #e0e0e0;
+  color: #333;
+  border-color: #e0e0e0;
+}
+
+/* Navigation tabs dark mode */
+body.dark-mode .nav-tabs {
+  background: #444;
+}
+
+body.dark-mode .tab-btn {
+  color: #b0b0b0;
+}
+
+body.dark-mode .tab-btn.active {
+  background: #555;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .tab-btn:hover {
+  color: #ffffff;
+}
+
+/* Search bar dark mode */
+body.dark-mode .search-box input {
+  background: #444;
+  border-color: #666;
+  color: #e0e0e0;
+}
+
+body.dark-mode .search-box input:focus {
+  border-color: #888;
+}
+
+body.dark-mode .search-box input::placeholder {
+  color: #888;
+}
+
+body.dark-mode .search-box i {
+  color: #888;
+}
+
+body.dark-mode .sort-dropdown {
+  background: #444;
+  border-color: #666;
+  color: #e0e0e0;
+}
+
+/* Loading and error states dark mode */
+body.dark-mode .loading {
+  color: #b0b0b0;
+}
+
+body.dark-mode .error {
+  color: #ff6b6b;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   body {
@@ -360,6 +546,17 @@ i[class*="fa-"] {
     overflow-y: auto;
     padding: 18px;
     justify-content: flex-start;
+  }
+
+  .name-section {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .dark-mode-toggle {
+    margin-left: 15px;
+    position: static;
   }
 
   .profile {
@@ -395,6 +592,10 @@ i[class*="fa-"] {
   .search-filter-bar {
     flex-direction: column;
   }
+
+  body.dark-mode .sidebar {
+    border-bottom-color: #444;
+  }
 }
 
 @media (max-width: 480px) {
@@ -415,6 +616,12 @@ i[class*="fa-"] {
   }
 
   .bio {
+    font-size: 14px;
+  }
+
+  .dark-mode-toggle {
+    width: 36px;
+    height: 36px;
     font-size: 14px;
   }
 }
